@@ -19,6 +19,16 @@
 				LIMIT $page , $max ")->result();
 		}
 
+		function getPinnedBlog($page=0,$max=5){
+			return $this->db->query("SELECT  `post_date` , `pinned`,`pin_priority`, `blog_posts`.`ID` as id,  `post_content` ,  `post_title` ,  `post_name` ,  `post_modified` ,  `comment_count` ,  `post_view` ,  `user_login` 
+				FROM  `blog_posts` ,  `users` 
+				WHERE post_author = users.id
+				AND post_type =  'blog'
+				AND pinned = '1'
+				ORDER BY pin_priority ASC 
+				LIMIT $page , $max ")->result();
+		}
+
 		function getArticle($id,$name){
 			return $this->db->query("SELECT  `post_date` ,  `post_content` ,  `post_title` ,  `post_name` ,  `post_modified` ,  `comment_count` ,  `post_view` ,  `user_login` 
 				FROM  `blog_posts` ,  `users` 

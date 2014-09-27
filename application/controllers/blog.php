@@ -1,6 +1,9 @@
 <?php
 	/* TODO :
-	Building backbone structure
+	bugs : markdown editor masih mengijinkan script html, jadi masih rawan,
+	contoh apabila dimasukan <style>*{display:none;}</style> atau tag <script>,
+	permasalahannya adalah apabila specialchar di ubah jadi char entities (lt rt dll)
+	pas nulis code di blog akan terlihat karakter aslinya. ada ide?
 	*/
 	class Blog extends CI_Controller {
 		function __construct(){
@@ -52,7 +55,7 @@
 
 		}
 
-		public function category($cat,$page=1){
+		public function tags($cat,$page=1){
 
 		}
 

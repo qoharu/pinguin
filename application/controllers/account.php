@@ -45,7 +45,6 @@
 
 		public function logout(){
 			$this->session->sess_destroy();
-			redirect('home');
 		}
 
 		public function register(){
@@ -68,18 +67,24 @@
 			$password = sha1($pass);
 			$confirm_password = sha1($this->input->post('confirm-password'));
 
+			echo "<ul>";
 			if($password != $confirm_password){
 				$error = TRUE;
-				echo "Password tidak sama <br>";
+				echo "<li>Password tidak sama </li>";
 			}
 			if(!$this->check_username($username)){
 				$error = TRUE;
-				echo "<br>";
+				echo "<li>Username tidak dapat digunakan</li>";
 			}
 			if(!$this->check_email($email)){
 				$error = TRUE;
-				echo "<br>";
+				echo "<li>Email tidak dapat digunakan </li>";
 			}
+			if(empty($email) or empty($username) or empty($password) ){
+				$error = TRUE;
+				echo "<li>Semua kolom harus diisi</li>";
+			}
+			echo "</ul>";
 
 			if($error == FALSE){
 				$data = array(

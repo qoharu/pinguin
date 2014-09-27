@@ -32,9 +32,11 @@ $(document).ready(function(){
 	$("#logout").click(function(){
 		$.ajax({
 			type: "POST",
-			url: base_url+"account/logout"
-		})
-		$("#nav-right").load(base_url+'template/aside').hide().fadeIn('slow');
+			url: base_url+"account/logout",
+      success : function(){
+		    $("#nav-right").hide().load(base_url+'template/aside').fadeIn('slow');
+      }
+    })
 	})
 
   // Parsedown Preview
@@ -99,7 +101,7 @@ $(document).ready(function(){
       },
       beforeSend:function()
       {
-        $("#register-alert").html("<h4 class='alert-notif'>Loading...</h4>").fadeIn('fast');
+        $("#register-alert").html("<h4 class='alert-notif'>Logging in...</h4>").fadeIn('fast');
       }
     });
     return false;
