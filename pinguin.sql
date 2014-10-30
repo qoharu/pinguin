@@ -2,10 +2,10 @@
 -- version 4.0.4.1
 -- http://www.phpmyadmin.net
 --
--- Inang: 127.0.0.1
--- Waktu pembuatan: 01 Okt 2014 pada 14.33
--- Versi Server: 5.5.32
--- Versi PHP: 5.4.19
+-- Host: 127.0.0.1
+-- Generation Time: Oct 30, 2014 at 04:38 AM
+-- Server version: 5.5.32
+-- PHP Version: 5.4.19
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Basis data: `pinguin`
+-- Database: `pinguin`
 --
 CREATE DATABASE IF NOT EXISTS `pinguin` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
 USE `pinguin`;
@@ -25,7 +25,7 @@ USE `pinguin`;
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `block_word`
+-- Table structure for table `block_word`
 --
 
 CREATE TABLE IF NOT EXISTS `block_word` (
@@ -37,7 +37,7 @@ CREATE TABLE IF NOT EXISTS `block_word` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `blog_category`
+-- Table structure for table `blog_category`
 --
 
 CREATE TABLE IF NOT EXISTS `blog_category` (
@@ -51,7 +51,7 @@ CREATE TABLE IF NOT EXISTS `blog_category` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `blog_comments`
+-- Table structure for table `blog_comments`
 --
 
 CREATE TABLE IF NOT EXISTS `blog_comments` (
@@ -71,7 +71,7 @@ CREATE TABLE IF NOT EXISTS `blog_comments` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `blog_posts`
+-- Table structure for table `blog_posts`
 --
 
 CREATE TABLE IF NOT EXISTS `blog_posts` (
@@ -91,10 +91,10 @@ CREATE TABLE IF NOT EXISTS `blog_posts` (
   `pin_priority` int(11) NOT NULL DEFAULT '99',
   PRIMARY KEY (`ID`),
   KEY `post_author` (`post_author`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=10 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
 
 --
--- Dumping data untuk tabel `blog_posts`
+-- Dumping data for table `blog_posts`
 --
 
 INSERT INTO `blog_posts` (`ID`, `post_author`, `post_date`, `post_content`, `post_title`, `post_status`, `post_name`, `comment_status`, `post_modified`, `post_type`, `comment_count`, `post_view`, `pinned`, `pin_priority`) VALUES
@@ -105,12 +105,13 @@ INSERT INTO `blog_posts` (`ID`, `post_author`, `post_date`, `post_content`, `pos
 (6, 1, '2014-09-01 13:15:46', 'Ini cara nulis code :\n```php\necho "Hello bro!";\n```\natau ini kalau mau nulis code yang inline ```function(a) = 3;``` gitu cuuy', 'Percobaan keempat', 'publish', 'Percobaan-keempat', 'open', '2014-09-01 13:15:46', 'blog', 0, 0, 0, 99),
 (7, 1, '2014-09-01 13:19:57', 'Kalau yang ini adalah cara bikin tabel :  \n\n| No | Nama | Utang |\n|:-----|:--------:|-----------:|\n| 1 | Salman | Rp. 0,00  |\n| 2 | Bhakti   | Rp. 10.000,00|\n| 3 | Rama   | Rp. 35.000,00 |', 'Percobaan keempat', 'publish', 'Percobaan-keempat', 'open', '2014-09-01 13:19:57', 'blog', 0, 0, 0, 99),
 (8, 1, '2014-09-01 13:20:42', 'iiiih', 'satu dan dua', 'publish', 'satu-dan-dua', 'open', '2014-09-01 13:20:42', 'blog', 0, 0, 0, 99),
-(9, 1, '2014-09-01 18:39:08', 'Berikut ini adalah contoh penggunaan markdown yang diterapkan pada blog   \r\n\r\nMarkdown\r\n===\r\n\r\nPada hari minggu ku turut ayah ke kota, naik __delman__ istimewa ku **duduk** di muka, ku duduk samping pak *kusir* yang sedang _bekerja _ .\r\n\r\nLalu, berikut ini adalah cara penulisan code, selain penulisan inline seperti ```writeln("Ahlan Dunya");``` code juga dapat ditulis terpisah seperti ini :\r\n\r\n```pascal\r\nvar a: integer\r\n\r\nbegin\r\n  a := 30;\r\n  writeln(a+5);\r\nend.\r\n```\r\n\r\nBerikut adalah tiga divisi yang ada di CNC :  \r\n1. Asisten Lab\r\n2. Asisten Praktikum\r\n3. Asisten Riset / Senior Member \r\n___\r\nNaah, sekarang sudah tahu kan? sekarang dibawah sini ada \r\n\r\n| No. | Nama | Hutang |\r\n|:-----|:-------:|----------:|\r\n| 1 | Si jangkar tukang baso tahu| Rp. 25.000.000|\r\n| 2 | Si Bajak tukang bajak langit| Rp. 50.000.000|\r\n| 3 | Laode M. Rayhan               | Rp. 200.000.000.000.000.000 |\r\n\r\nNah, itulah orang-orang yang belum bayar hutang sama saya, selain itu, ada juga si jangkar yang lagi pusing liatin matahari karena matanya gak kuateun :\r\n- Si Koplak\r\n- Si Tidak Koplak, dan\r\n- Si Kaplok.  \r\n\r\nOke mungkin segitu dulu ya tutorial dari saya, semoga bermanfaat\r\n>Sebuah masalah yang telah jelas digambarkan berarti telah terselesaikan sebagian.  \r\n>(C. F. Kettering)\r\n\r\n___\r\n[Sumber](http://squhart.web.id)\r\n\r\n![Gambar bullshit](http://localhost/pinguin/assets/img/balapa.jpg "Pakyu")\r\n', 'Contoh Markdown', 'publish', 'Contoh-Markdown', 'open', '2014-09-01 18:39:08', 'blog', 0, 0, 1, 2);
+(9, 1, '2014-09-01 18:39:08', 'Berikut ini adalah contoh penggunaan markdown yang diterapkan pada blog   \r\n\r\nMarkdown\r\n===\r\n\r\nPada hari minggu ku turut ayah ke kota, naik __delman__ istimewa ku **duduk** di muka, ku duduk samping pak *kusir* yang sedang _bekerja _ .\r\n\r\nLalu, berikut ini adalah cara penulisan code, selain penulisan inline seperti ```writeln("Ahlan Dunya");``` code juga dapat ditulis terpisah seperti ini :\r\n\r\n```pascal\r\nvar a: integer\r\n\r\nbegin\r\n  a := 30;\r\n  writeln(a+5);\r\nend.\r\n```\r\n\r\nBerikut adalah tiga divisi yang ada di CNC :  \r\n1. Asisten Lab\r\n2. Asisten Praktikum\r\n3. Asisten Riset / Senior Member \r\n___\r\nNaah, sekarang sudah tahu kan? sekarang dibawah sini ada \r\n\r\n| No. | Nama | Hutang |\r\n|:-----|:-------:|----------:|\r\n| 1 | Si jangkar tukang baso tahu| Rp. 25.000.000|\r\n| 2 | Si Bajak tukang bajak langit| Rp. 50.000.000|\r\n| 3 | Laode M. Rayhan               | Rp. 200.000.000.000.000.000 |\r\n\r\nNah, itulah orang-orang yang belum bayar hutang sama saya, selain itu, ada juga si jangkar yang lagi pusing liatin matahari karena matanya gak kuateun :\r\n- Si Koplak\r\n- Si Tidak Koplak, dan\r\n- Si Kaplok.  \r\n\r\nOke mungkin segitu dulu ya tutorial dari saya, semoga bermanfaat\r\n>Sebuah masalah yang telah jelas digambarkan berarti telah terselesaikan sebagian.  \r\n>(C. F. Kettering)\r\n\r\n___\r\n[Sumber](http://squhart.web.id)\r\n\r\n![Gambar bullshit](http://localhost/pinguin/assets/img/balapa.jpg "Pakyu")\r\n', 'Contoh Markdown', 'publish', 'Contoh-Markdown', 'open', '2014-09-01 18:39:08', 'blog', 0, 0, 1, 2),
+(10, 1, '2014-10-01 20:11:24', 'Halo, apa kabar?\r\n\r\n```php\r\nfunction(a){\r\n  echo "yeah";\r\n}\r\n```\r\n\r\nini __BOLD__ ini _MIRING_ kalo ini list :  \r\n1. aku\r\n2. adalah\r\n3. manusia\r\n\r\n', 'JUDULNYA DISINI', 'publish', 'JUDULNYA-DISINI', 'open', '2014-10-01 20:11:24', 'blog', 0, 0, 1, 1);
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `forum_category`
+-- Table structure for table `forum_category`
 --
 
 CREATE TABLE IF NOT EXISTS `forum_category` (
@@ -121,7 +122,7 @@ CREATE TABLE IF NOT EXISTS `forum_category` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
 
 --
--- Dumping data untuk tabel `forum_category`
+-- Dumping data for table `forum_category`
 --
 
 INSERT INTO `forum_category` (`id_cat`, `category`, `deskripsi`) VALUES
@@ -134,7 +135,7 @@ INSERT INTO `forum_category` (`id_cat`, `category`, `deskripsi`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `forum_comment`
+-- Table structure for table `forum_comment`
 --
 
 CREATE TABLE IF NOT EXISTS `forum_comment` (
@@ -149,7 +150,7 @@ CREATE TABLE IF NOT EXISTS `forum_comment` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
 
 --
--- Dumping data untuk tabel `forum_comment`
+-- Dumping data for table `forum_comment`
 --
 
 INSERT INTO `forum_comment` (`id_comment`, `id_thread`, `id`, `comment`, `time`) VALUES
@@ -158,7 +159,7 @@ INSERT INTO `forum_comment` (`id_comment`, `id_thread`, `id`, `comment`, `time`)
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `forum_thread`
+-- Table structure for table `forum_thread`
 --
 
 CREATE TABLE IF NOT EXISTS `forum_thread` (
@@ -171,10 +172,10 @@ CREATE TABLE IF NOT EXISTS `forum_thread` (
   PRIMARY KEY (`id_thread`),
   KEY `id_cat` (`id_cat`),
   KEY `id_user` (`id_user`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=43 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=44 ;
 
 --
--- Dumping data untuk tabel `forum_thread`
+-- Dumping data for table `forum_thread`
 --
 
 INSERT INTO `forum_thread` (`id_thread`, `title`, `thread`, `id_cat`, `time`, `id_user`) VALUES
@@ -202,12 +203,13 @@ INSERT INTO `forum_thread` (`id_thread`, `title`, `thread`, `id_cat`, `time`, `i
 (38, 'dfasdf', '<p>adsfasdfasdfasdf</p>\r\n', 1, '0000-00-00 00:00:00', 7),
 (39, 'adsfasdfasdramaprakososss', '<p>gantengn seklaoo&nbsp;</p>\r\n', 3, '2014-09-21 00:00:00', 7),
 (40, 'Bram Purba', '<p>adsfasdfasdfasdfasdfasdfsad</p>\r\n', 3, '2014-09-21 00:00:00', 7),
-(42, 'Basic Router ', '<p>Basic router 1 2 3&nbsp;</p>\r\n', 3, '2014-09-22 00:00:00', 7);
+(42, 'Basic Router ', '<p>Basic router 1 2 3&nbsp;</p>\r\n', 3, '2014-09-22 00:00:00', 7),
+(43, 'BITCH', '<p>yomamen</p>\r\n', 1, '2014-10-28 00:00:00', 0);
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `users`
+-- Table structure for table `users`
 --
 
 CREATE TABLE IF NOT EXISTS `users` (
@@ -224,22 +226,24 @@ CREATE TABLE IF NOT EXISTS `users` (
   UNIQUE KEY `user_email` (`user_email`),
   KEY `ID` (`ID`),
   KEY `user_level` (`user_level`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=20 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=21 ;
 
 --
--- Dumping data untuk tabel `users`
+-- Dumping data for table `users`
 --
 
 INSERT INTO `users` (`ID`, `user_login`, `user_fullname`, `user_pass`, `user_email`, `user_registered`, `user_last_login`, `user_level`) VALUES
 (1, 'squhart', 'Muhammad Salman Abdul Qohar', '831fff05cae77b6ca89a4d9807da881265570e8a', 'squhart@gmail.com', '2014-08-13 21:57:00', '0000-00-00 00:00:00', 1),
+(7, 'salmaan', 'salman salman', 'de1d312533aba0907a8f8cebf8d3d91d4678ad06', 'salmaan@gmail.com', NULL, NULL, 3),
 (8, 'salman', '', '831fff05cae77b6ca89a4d9807da881265570e8a', 'salman@gmail.com', NULL, NULL, 1),
 (18, 'salmin', '', '831fff05cae77b6ca89a4d9807da881265570e8a', 'salmin@gmail.com', NULL, NULL, 1),
-(19, 'unyu', '', '831fff05cae77b6ca89a4d9807da881265570e8a', 'unyu@gmail.com', NULL, NULL, 1);
+(19, 'unyu', '', '831fff05cae77b6ca89a4d9807da881265570e8a', 'unyu@gmail.com', NULL, NULL, 1),
+(20, 'tai', '', '831fff05cae77b6ca89a4d9807da881265570e8a', 'tai@gmail.com', NULL, NULL, 3);
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `user_level`
+-- Table structure for table `user_level`
 --
 
 CREATE TABLE IF NOT EXISTS `user_level` (
@@ -250,7 +254,7 @@ CREATE TABLE IF NOT EXISTS `user_level` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
 
 --
--- Dumping data untuk tabel `user_level`
+-- Dumping data for table `user_level`
 --
 
 INSERT INTO `user_level` (`ID`, `level_name`) VALUES
@@ -259,23 +263,23 @@ INSERT INTO `user_level` (`ID`, `level_name`) VALUES
 (3, 'user');
 
 --
--- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
+-- Constraints for dumped tables
 --
 
 --
--- Ketidakleluasaan untuk tabel `blog_comments`
+-- Constraints for table `blog_comments`
 --
 ALTER TABLE `blog_comments`
   ADD CONSTRAINT `blog_comments_ibfk_1` FOREIGN KEY (`comment_post_ID`) REFERENCES `blog_posts` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Ketidakleluasaan untuk tabel `blog_posts`
+-- Constraints for table `blog_posts`
 --
 ALTER TABLE `blog_posts`
   ADD CONSTRAINT `blog_posts_ibfk_1` FOREIGN KEY (`post_author`) REFERENCES `users` (`ID`);
 
 --
--- Ketidakleluasaan untuk tabel `users`
+-- Constraints for table `users`
 --
 ALTER TABLE `users`
   ADD CONSTRAINT `users_ibfk_1` FOREIGN KEY (`user_level`) REFERENCES `user_level` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
