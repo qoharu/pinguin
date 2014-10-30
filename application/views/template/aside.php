@@ -18,13 +18,13 @@
 
     <div class="right-modul come-in login-modul on">
       <div class="image-profile pull-left">
-        <img class="user-photo" src="img/balapa.jpg">
+        <img class="user-photo" src="<?php echo base_url() ?>assets/img/balapa.jpg" title="dummy" >
       </div>
       <div class="profile-detail pull-left">
         <ul class="profile">
-          <li>Bhakti Pasaribu</li>
-          <li>balapa</li>
-          <li>admin</li>
+          <li><?php echo $this->session->userdata('fullname'); ?></li>
+          <li><?php echo $this->session->userdata('username'); ?></li>
+          <li><?php echo $this->session->userdata('email'); ?></li>
         </ul>
       </div>
       <div class="user-choice">

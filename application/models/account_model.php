@@ -24,6 +24,7 @@
 	            'username'  => $data->user_login,
 	            'email'     => $data->user_email,
 	            'level'  => $data->user_level,
+	            'fullname'  => $data->user_fullname,
 	            'isLogin'  => TRUE
 	        );
 	        $this->session->set_userdata($sesi);

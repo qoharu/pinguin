@@ -10,6 +10,10 @@
 			$this->load->model('account_model');
 			$this->load->model('blog_model');
 			$this->load->model('forum_model');
+
+			if( !$this->session->userdata('isLogin') or !($this->session->userdata('level')==='1' or $this->session->userdata('level')==='2') ){
+				redirect('account/login');	
+			}
 		}
 
 		public function index(){

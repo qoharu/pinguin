@@ -91,7 +91,7 @@
 					'user_login' =>$username,
 					'user_pass' =>$password,
 					'user_email' =>$email,
-					'user_level' =>"1"
+					'user_level' =>"3"
 				);
 				$this->account_model->register($data);
 				$this->login_process($username,$pass);
